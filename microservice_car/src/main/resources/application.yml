@@ -1,0 +1,30 @@
+# Spring properties
+spring:
+  application:
+     name: servicio-car  # Service registers under this name
+#  freemarker:
+#    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+#  thymeleaf:
+#    cache: false             # Allow Thymeleaf templates to be reloaded at runtime
+#    prefix: classpath:/templates/    # Trailing / mandatory  # Template location for this application only
+
+ 
+# Discovery Server Access
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2    
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:1111/eureka/}
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+ 
+# HTTP Server
+server:
+  port: ${vcap.application.port:2222}   # HTTP (Tomcat) port
+  
+  
+spring.boot.admin.url: http://localhost:8082

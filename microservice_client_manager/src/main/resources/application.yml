@@ -1,0 +1,19 @@
+server:
+  port: ${vcap.application.port:8082}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:1111/eureka/}
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: car-client-service
+
+logging:
+  level:
+    org.exampledriven.eureka.customer.shared.CustomerServiceFeignClient: FULL
