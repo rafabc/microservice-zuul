@@ -23,5 +23,6 @@ start this module with mvn spring-boot:run Running on port 8081 After that you c
 Now run zuul microservice
 
 start this module with mvn spring-boot:run Running on port 8080
-Now zuul go to redirect every request that cotaint /car/** to the client /n
+Now zuul go to redirect every request that cotaint /car/** to the client.
+
 To access to car microservice use now this url: http://localhost:8080/car/client-car/3
