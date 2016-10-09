@@ -11,6 +11,7 @@ public class MicroserviceClientManagerApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		// This constructor is intentionally empty
 	}
 
 }

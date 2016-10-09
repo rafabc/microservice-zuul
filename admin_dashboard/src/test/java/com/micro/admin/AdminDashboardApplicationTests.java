@@ -19,6 +19,7 @@ public class AdminDashboardApplicationTests {
 	 */
 	@Test
 	public void contextLoads() {
+		// This constructor is intentionally empty
 	}
 
 }
